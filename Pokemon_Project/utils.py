@@ -9,7 +9,7 @@ def startup():
 
     :return: Does not return anything.
     """
-
+    print("\t"*8, "Pokemon Trainer App")
 
 def options():
     """
@@ -20,8 +20,10 @@ def options():
 
     :return: None if invalid selection otherwise an integer corresponding to a valid selection
     """
-
-
+    print("Choose an option from menu: \n1-Check your pokemon\n2-Add a new pokemon\n3-Show all Pokemon\n4-Visualise\n5-Save your pokedex\n0-Exit ")
+    opt = int(input("Your Option: "))
+    if opt in range (0,8):
+        return opt
 def check_poke():
     """
     Task 3: Display a menu of options for how a Pokemon should be searched. Read in the user's response.
@@ -31,7 +33,11 @@ def check_poke():
 
     :return: None if an invalid selection made otherwise an integer corresponding to a valid option
     """
-
+    print(
+        "How would you like to search: \n1-By name\n2-By type")
+    opt = int(input("Your Option: "))
+    if opt in range[ 1, 2 ]:
+        return opt
 
 def add_poke():
     """
@@ -42,7 +48,10 @@ def add_poke():
 
     :return: None if an invalid selection made otherwise an integer corresponding to a valid option
     """
-
+    print("How should we add: \n1-Add specific\n2-Add at random")
+    opt = int(input("Your Option: "))
+    if opt in range[1,2]:
+        return opt
 def visualise():
     """
     Task 5: Display a menu of options for how a graph should be produced. Read in the user's response.
