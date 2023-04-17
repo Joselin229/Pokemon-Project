@@ -61,7 +61,10 @@ def visualise():
 
     :return: None if an invalid selection made otherwise an integer corresponding to a valid option
     """
-
+    print("How should we display: \n1-By generation (pie chart)\n2-By type (bar chart)")
+    opt = int(input("Your Option: "))
+    if opt in range[1, 2]:
+        return opt
 def by_name(p_list = []):
     
     """
@@ -75,7 +78,13 @@ def by_name(p_list = []):
     :param p_list: A list of pokemon
     :return: does not return anything
     """
-
+    p_name = input("Enter the name of the pokemon: ")
+    if p_name in p_list:
+        for pokemon in p_list:
+            if pokemon[1] == p_name:
+                print(pokemon)
+    else:
+        print(f"Sorry, {p_name} is not on the list")
 def by_type(p_list = []):
     
     """
